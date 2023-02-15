@@ -11,6 +11,7 @@ gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay)
 // create an array of choices
 const choices = ['rock', 'paper', 'scissors']
 let userChoice
+let computerChoice
 
 const handleClick = (e) => {
     userChoice = e.target.id
@@ -20,7 +21,8 @@ const handleClick = (e) => {
 
 const generateComputerChoice = () => {
     const randomChoice = choices[Math.floor(Math.random() * choices.length)]
-    computerChoiceDisplay.innerHTML = 'Computer choice: ' + randomChoice
+    computerChoice = randomChoice
+    computerChoiceDisplay.innerHTML = 'Computer choice: ' + computerChoice
 
 }
 
@@ -31,4 +33,25 @@ for (let i = 0; i < choices.length; i++) {
     button.innerHTML = choices[i]
     button.addEventListener('click', handleClick)
     gameGrid.appendChild(button)
+}
+
+const getResult = () => {
+    switch (userChoice + computerChoice) {
+        case 'scissorspaper':
+        case 'rockscissors':
+        case 'paperrock':
+            resultDisplay.innerHTML = "You win!"
+            break
+        case 'paperscissors':
+        case 'scissorsrock':
+        case 'rockpaper':
+            resultDisplay.innerHTML = "You lose!"
+            break
+        case 'paperpaper':
+            case 'scissorscissors':
+            case 'rockrock':
+                resultDisplay.innerHTML = "It's a draw!"
+                break
+        
+    }
 }
