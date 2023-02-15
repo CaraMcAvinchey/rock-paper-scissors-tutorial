@@ -13,26 +13,27 @@ const choices = ['rock', 'paper', 'scissors']
 let userChoice
 let computerChoice
 
+// pass through an event, 
 const handleClick = (e) => {
-    userChoice = e.target.id
+    userChoice = e.target.id // e = the event which is the click
     userChoiceDisplay.innerHTML = 'User choice: ' + userChoice
-    generateComputerChoice()
+    generateComputerChoice() // after the user has clicked, call the function to generate the computer choice
+    getResult() // call the results function to compare user and computer choice 
 }
 
 const generateComputerChoice = () => {
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)]
+    const randomChoice = choices[Math.floor(Math.random() * choices.length)] // generate a random choice using length of choices array and rounded down
     computerChoice = randomChoice
-    computerChoiceDisplay.innerHTML = 'Computer choice: ' + computerChoice
-
+    computerChoiceDisplay.innerHTML = 'Computer choice: ' + computerChoice // display the choice of the computer
 }
 
 // create three buttons, loop through each of the choices
 for (let i = 0; i < choices.length; i++) {
     const button = document.createElement('button')
-    button.id = choices[i] // you can delete this if you want to use e.target.innerHTML in the handleClick
-    button.innerHTML = choices[i]
-    button.addEventListener('click', handleClick)
-    gameGrid.appendChild(button)
+    button.id = choices[i] // assign each button an id (you can delete this if you want to use e.target.innerHTML in the handleClick)
+    button.innerHTML = choices[i] 
+    button.addEventListener('click', handleClick) 
+    gameGrid.appendChild(button) // get the game grid, append the buttons to the DOM
 }
 
 const getResult = () => {
@@ -48,10 +49,10 @@ const getResult = () => {
             resultDisplay.innerHTML = "You lose!"
             break
         case 'paperpaper':
-            case 'scissorscissors':
-            case 'rockrock':
-                resultDisplay.innerHTML = "It's a draw!"
-                break
+        case 'scissorscissors':
+        case 'rockrock':
+            resultDisplay.innerHTML = "It's a draw!"
+            break
         
     }
 }
