@@ -11,28 +11,71 @@
     <title>Rock Paper Scissors!</title>
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <header>
-    <h1>Welcome to Rock Paper Scissors!</h1>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Rock, Paper Scissors</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+
+    <main>
+        <div class="container text-center">
+            <div class="row">
+                <h1>Welcome!</h1>
+                <h2>Make a move:</h2>
+            </div>
+            <div class="row">
+                <h2>Computer Choice: <span id="computer-choice"></span></h2>
+                <h2>Your Choice: <span id="user-choice"></span></h2>
+                <h2>Result: <span id="result"></span></h2>
+            </div>
+            <div class="row">
+                <div class="m-2">
+                    <button type="button" class="btn btn-primary btn-lg m-1" id="rock">rock</button>
+                    <button type="button" class="btn btn-primary btn-lg m-1" id="paper">paper</button>
+                    <button type="button" class="btn btn-primary btn-lg m-1" id="scissors">scissors</button>
+                </div>
+            </div>
+        </div>
+    </main>
     
-    <div>
-    <h2>Computer Choice: <span id="computer-choice"></span></h2>
-    <h2>Your Choice: <span id="user-choice"></span></h2>
-    <h2>Result: <span id="result"></span></h2>
-    </div>  
-
-    <div>
-    <button id="rock">rock</button>
-    <button id="paper">paper</button>
-    <button id="scissors">scissors</button>
-    </div>
-
-    <footer>
-
+    <footer class="footer fixed-bottom py-3 bg-light">
+        <div class="container">
+            <p class="m-1 text-center">Made by Cara McAvinchey</p>
+            <p class="m-1 text-center">Find more of my work</p>
+            <p class="m-1 text-center social-icons">
+                <a href="https://www.linkedin.com/caramcavinchey/" target="_blank" rel="noopener"
+                    aria-label="Visit my LinkedIn page (opens in new tab)"><i class="fa-brands fa-linkedin text-black m-1"></i></a>
+                <a href="https://www.github.com/CaraMcAvinchey" target="_blank" rel="noopener"
+                    aria-label="Visit my GitHub page (opens in new tab)"><i class="fa-brands fa-github text-black m-1"></i></a>
+            </p>
+            <p class="text-center">© 2023 Copyright Cara McAvinchey</p>
+        </div>
     </footer>
 
     <script src="assets/js/script-beginner.js"></script>
+    <!--font awesome script-->
+    <script src="https://kit.fontawesome.com/7cf492ae91.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
