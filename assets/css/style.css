@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Fredoka+One&display=swap');
+
 body {
     background-color: #F6CD50;
+    font-family: 'ABeeZee', sans-serif;
 
 }
 
@@ -10,4 +13,8 @@ body {
 .socials-icon i:hover {
     transform: scale(1.2);
     transition: 0.4s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka One', cursive;
 }
