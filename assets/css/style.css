@@ -6,6 +6,12 @@ body {
 
 }
 
+.logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+
+}
+
 .social-icons i {
     font-size: 25px;
 }
